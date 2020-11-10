@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "sketch": "inception/inception.ino",
+    "port": "/dev/tty.usbmodem142201",
+    "programmer": "Arduino as ISP"
+}
