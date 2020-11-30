@@ -32,9 +32,9 @@
 - **11/30(月)活動報告(報告者:田中裕)**
 >リポバッテリーの充電器が届き、従来使用していたスパークキラー(写真1)を噛まして動作確認を行ったところ、スパークが発生した。充電が満タンになったことで、電力が増し、従来のスパークキラーではスパークを抑えることができなくなったと考える。このことから、スパークキラーの調整が必要になった。 
   まず、3[Ω]の抵抗を5つ並列にして試した所、バッテリーの接点から火花が確認できた。さらに、2つの直列の抵抗を並列に2本接続した所、スパークの音はなったが火花は出なかった。  
-  |***![aaa](https://github.com/DTK-CreativeStudio/Drone2020/tree/master/cirkit/download.jpg)***|
+  |***![aaa](https://github.com/DTK-CreativeStudio/Drone2020/tree/master/cirkit/sake.PNG)***|
 
-  |![](https://github.com/DTK-CreativeStudio/Drone2020/tree/master/cirkit/download.jpg)|
+  |![](https://github.com/DTK-CreativeStudio/Drone2020/tree/master/cirkit/sake.PNG)|
   
   ***今後の課題***  
   >~~・4つのモーターの制御にはPCの定電圧電源を用いたので、その制御がリチウムポリマーバッテリーでもできるのかを検証する。~~  
