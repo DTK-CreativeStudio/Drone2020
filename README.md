@@ -45,6 +45,7 @@
   さらに、2つの直列の抵抗を並列に2本接続した所、スパークの音はなったが火花は出なかった。  
   <img width="439" alt="spake_2" src="https://user-images.githubusercontent.com/74751686/100611324-85cce800-3354-11eb-92ba-ed83dca8aaee.PNG">
 　上記の状態のスパークキラーを用いることで、ゆっくり接点を短絡させることで、スパークが高確率で起こらないようになった。また、リポバッテリーの充電器を得たことで、安定して動作実験が行えるようになった。今後は、姿勢制御に力を入れていきたい。  
+　　
 ***
 
 - **12/3(木)活動報告(報告者:田中裕)**  
@@ -56,7 +57,7 @@
   
 >gy-251(六軸ジャイロセンサ)にて、arduinoのI2Cdevライブラリを用いたyaw,pitch,roll角の測定に成功した。  
 >>[手順]  
-(1)(https://github.com/jrowberg/i2cdevlib)でi2cdevライブラリをダウンロードする。      
+(1)(https://github.com/jrowberg/i2cdevlib)  でi2cdevライブラリをダウンロードする。      
 (2)ダウンロートファイルの中の「arduino」というディレクトリの「i2cdev」および「MPU6050」を自前のarduinoの「libraries」に保存。  
 ※もし、もともと「libraries」が存在しなかった場合、arduinoというフォルダに直で「libraries」というフォルダを作成すればいい。  
 (3)この段階で実行中、または展開中のarduinoIDEがあればすべて閉じて、再びIDEを開く。  
