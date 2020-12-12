@@ -23,7 +23,8 @@
   
 >・4つのモーターを2つのPWM信号で2つづつ制御しようと、試みたところ、プロペラをつけていない状態での正常運転はPC電源及びリポバッテリーともに確認した。しかし、プロペラをつけて再度試みたところ、リポバッテリーの場合は正常に運転したが、PC電源を用いた際、途中でモーターが停止し、電源のファンの停止も確認した　　
 (tanaka\brushledd_double_control.inoを使用)　
-<img width="331" alt="11_24" src="https://user-images.githubusercontent.com/74751686/101986743-329f5180-3cd3-11eb-9a65-7a273803f028.png">
+<img width="318" alt="11_24" src="https://user-images.githubusercontent.com/74751686/101986981-a8f08380-3cd4-11eb-84b7-61670dce2846.PNG">
+
 
 ---
  　　
@@ -55,7 +56,8 @@
 
 >モーターの4つそれぞれを、４つのPWM信号を用いて制御することに成功した。
 (tanaka\brushless_quad__control.inoを使用)　   
-<img width="461" alt="arduino_brushless_quad" src="https://user-images.githubusercontent.com/74751686/100997018-21509980-359d-11eb-9b83-b31894411b0e.PNG">
+<img width="356" alt="brushless_quad_control" src="https://user-images.githubusercontent.com/74751686/101986969-98d8a400-3cd4-11eb-834f-7eb2194031d8.PNG">
+
   
 >gy-251(六軸ジャイロセンサ)にて、arduinoのI2Cdevライブラリを用いたyaw,pitch,roll角の測定に成功した。  
 >>[手順]  
