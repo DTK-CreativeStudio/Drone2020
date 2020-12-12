@@ -11,7 +11,7 @@ Servo throttle;　　　　　　　　　　
 Servo throttle2;                  //モーターを2つ制御するためにサーボを2つ制御できるようにする
 
 int level = throttle_low;
-
+int val, val2;
 void setup(){
 
   throttle.attach(9);　　　　　　　　//モーターの制御ピンをそれぞれ9,10にさすようにする。
