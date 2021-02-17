@@ -70,10 +70,10 @@
 <img width="490" alt="arduino_gyro" src="https://user-images.githubusercontent.com/74751686/101012991-f9663380-35a6-11eb-9461-9dffd99964df.PNG"> 
 
 - **2/17(水)活動報告**
-  ・PID制御をExcelで実験してみた
+  >・PID制御をExcelで実験してみた
 (tanaka\PID制御(操作量-(g-U),誤差量-a).xlsxを参照)
 詳しくはpdfにまとめてているので(tanaka\z軸方向のドローンの位置制御(PID).pdf)を見てください。  
-・Excelで目的値に収束した式、ゲインをUnityの物理エンジンで試した見たところドローンモデルが振動した。
+  >・Excelで目的値に収束した式、ゲインをUnityの物理エンジンで試した見たところドローンモデルが振動した。
   →今後は物理エンジンで目標値に収束しなかった原因を究明する。
   ***
 
