@@ -68,7 +68,8 @@
 (4)IDEのメニューから「ファイル」→「スケッチ例」→「MPU6050_DMP6」という手順でファイルを開く。  
 (5)ソース上部に記述してあるとおりにGY-251とarduinoの配線を行う。  
 <img width="490" alt="arduino_gyro" src="https://user-images.githubusercontent.com/74751686/101012991-f9663380-35a6-11eb-9461-9dffd99964df.PNG"> 
-
+  
+***
 - **2/17(水)活動報告**
   >・PID制御をExcelで実験してみた
 (tanaka\PID制御(操作量-(g-U),誤差量-a).xlsxを参照)
