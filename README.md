@@ -126,10 +126,10 @@
   [2SC235のデータシート](https://www.chip1stop.com/pdf/product/TOSH/2SC2235_JA_DATASHEET_061107.PDF)   
   
 >arudinoの最大出力定格が5[V],40[mA]であり、コレクタ電流が500[mA]、コレクタ電圧が3[V]となるためのベース電流は、2SC2235の伝達特性よりぴったり7[mA]くらいであることがわかる。よって5[V]の電圧を印加すると7[mA]になりそうな抵抗を適当に家から持ってきて以下のように配線し実験した。  
-![image](https://user-images.githubusercontent.com/74751686/130973924-ee98fc90-1ec6-4507-9bc5-1ea08933e2f5.png)
-[実験使用ソース](.\tanaka\R3.8.20.moter_control)  
+![image](https://user-images.githubusercontent.com/74751686/130976520-ec00ba6f-425a-4e99-b220-37c6944d32a0.png)
+[実験使用ソース](https://github.com/DTK-CreativeStudio/Drone2020/tree/master/tanaka/R3.8.20.moter_control)  
   
->単一でのモーター制御に成功したため、4つのモータの制御基板を同様に作成
+>単一でのモーター制御に成功したため、4つのモータの制御基板を同様に作成し、同様に制御に成功した。なお、3Vは単三乾電池2本を使用した。
 
 ***
   ***今後の課題***  
