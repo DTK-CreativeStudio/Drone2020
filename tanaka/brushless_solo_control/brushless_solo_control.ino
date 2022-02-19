@@ -6,15 +6,12 @@
 
 const int throttle_high = 2000;   //最高の回転数を決める(値は回転数ではない)
 const int throttle_low = 1000;    //最低の回転数を決める(値は回転数ではない)
-
-Servo throttle;　　　　　　　　　　
-
-
+Servo throttle;
 int level = throttle_low;
 
 void setup(){
 
-  throttle.attach(9);
+  throttle.attach(6);
 
   throttle.writeMicroseconds(level);  //先にサーボモーターの初期位置を決めておく
   delay(1000);                        //[注意]この値を900,800などにすると回らなくなるので注意!!
