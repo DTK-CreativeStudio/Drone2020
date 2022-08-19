@@ -219,19 +219,17 @@ double Differential_lowpass(double input, double frecentry, double lowpass_frece
   }
 */
 //微分器(ローパスフィルタなし)
-double Differential(double input, double frecentry){
+double Differential(double input, double target,double frecentry){
 
   double D;
   static double pastinput = 0;
-  D = (input - pastinput)/frecentry;
-  pastinput = input;
+  D = (target - input)/frecentry;
   return D;
   }
 //積分器(台形積分)
-double Integral(double input, double frecentry){
+double Integral(double input,double target, double frecentry){
   static double I = 0, pastinput = 0;
-  I = I + (input + pastinput) * frecentry / 2;
-  pastinput = input;
+  I = I + (target - input) * frecentry / 2;
   return I;
   }
 void loop() {
@@ -252,24 +250,26 @@ void loop() {
             mpu.dmpGetQuaternion(&q, fifoBuffer);
             mpu.dmpGetGravity(&gravity, &q);
             mpu.dmpGetYawPitchRoll(ypr, &q, &gravity);
-            Serial.print("pitch\t");           
+            //Serial.print("pitch\t");           
             int pitch = ypr[2] * 180/M_PI;//ジャイロセンサからピッチを読み取る
             Serial.print(pitch);//シリアルモニタに表示する
             Serial.println("\t"); 
-            double rpm = 0, kp = 0.1, ki = -0.2, kd =0, I, D,target =-10;
-            I = Integral(pitch,0.01);
-            D = Differential(pitch,0.01);
-            rpm = kp * (target - pitch) - kd * D + ki * I;
+            double rpm = 0, kp = 2, ki = 7, kd =-0.01, I, D,target = 5;
+            
+            I = Integral(pitch,target,0.06);
+            D = Differential(pitch,target,0.06);
+            rpm = kp * (target - pitch) + kd * D
+            + ki * I;
             //Serial.println(rpm);
             if(rpm <= -200|| 200 <= rpm){
                 rpm = 0;
               }
-            int base = 1700;
+            int base = 1500;
             throttle6.writeMicroseconds(base - rpm);
             throttle11.writeMicroseconds(base + rpm);
             throttle10.writeMicroseconds(base - rpm);
             throttle9.writeMicroseconds(base + rpm);
-            delay(10);
+            delay(60);
 
 
 

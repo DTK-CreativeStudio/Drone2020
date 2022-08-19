@@ -256,7 +256,7 @@ void loop() {
             int pitch = ypr[2] * 180/M_PI;//ジャイロセンサからピッチを読み取る
             Serial.print(pitch);//シリアルモニタに表示する
             Serial.println("\t"); 
-            double rpm = 0, kp = 0.1, ki = -0.2, kd =0, I, D,target =-10;
+            double rpm = 0, kp = 2, ki = 0, kd =0, I, D,target = 5;
             I = Integral(pitch,0.01);
             D = Differential(pitch,0.01);
             rpm = kp * (target - pitch) - kd * D + ki * I;
@@ -264,11 +264,11 @@ void loop() {
             if(rpm <= -200|| 200 <= rpm){
                 rpm = 0;
               }
-            int base = 1700;
-            throttle6.writeMicroseconds(base - rpm);
-            throttle11.writeMicroseconds(base + rpm);
-            throttle10.writeMicroseconds(base - rpm);
-            throttle9.writeMicroseconds(base + rpm);
+            int base = 1300;
+            throttle6.writeMicroseconds(base + rpm);
+            throttle11.writeMicroseconds(base - rpm);
+            throttle10.writeMicroseconds(base + rpm);
+            throttle9.writeMicroseconds(base - rpm);
             delay(10);
 
 
